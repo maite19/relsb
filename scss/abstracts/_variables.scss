@@ -1,0 +1,22 @@
+// PALETA DE COLORES
+$negro: #000;
+$blanco: #fff;
+$violeta: rgb(33, 0, 51);
+$gris: #444;
+$gris-claro: #cccccc;
+
+// TIPOGRAFÍA
+$fuente-principal: 'oswald', sans-serif;
+
+// TAMAÑOS BASE
+$tamano-base: 62.5%; 
+$line-height-base: 1.6;
+
+// MIXINS
+@mixin transition($properties...) {
+    transition: $properties 0.3s ease;
+}
+
+@mixin card-shadow {
+    box-shadow: 3px 6px 10px rgb(45, 0, 61);
+}

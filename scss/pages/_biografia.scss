@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as *;
+
+.biografia {
+    background: $negro;
+    color: $blanco;
+    padding: 5rem 2rem;
+
+    h2 {
+        font-size: 4.8rem;
+        color: $violeta;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .texto p {
+        font-size: 2.2rem;
+        line-height: 1.9;
+        color: $gris-claro;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(179, 0, 255, 0.3); // separador sutil
+    }
+
+    .texto blockquote {
+        font-size: 2.2rem; // mismo tamaño que los párrafos
+        line-height: 1.9;
+        color: lighten($violeta, 10%); // tono violeta más claro
+        font-style: italic;
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        border-left: 4px solid $violeta; // detalle violeta
+        background: rgba(255, 255, 255, 0.05); // fondo sutil
+        border-radius: 0.5rem;
+    }
+
+    .bloque {
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+        margin-bottom: 6rem;
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 1rem;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(100%);
+
+            &:hover {
+                transform: scale(1.05);
+                filter: grayscale(0%);
+            }
+        }
+
+        .texto {
+            max-width: 800px;
+
+            h3 {
+                font-size: 3.2rem;
+                margin-bottom: 1.5rem;
+                color: lighten($violeta, 20%);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .biografia {
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        .bloque {
+            flex-direction: column;
+
+            img {
+                max-width: 100%;
+            }
+
+            .texto {
+                text-align: center;
+
+                h3 {
+                    font-size: 2.6rem;
+                }
+
+                p {
+                    font-size: 2rem;
+                    line-height: 1.8;
+                    border-bottom: 1px solid rgba(179, 0, 255, 0.3);
+                    padding-bottom: 0.8rem;
+                }
+
+                blockquote {
+                    font-size: 2rem;
+                    line-height: 1.8;
+                    margin: 1.5rem 0;
+                    padding: 1rem;
+                    border-left: none; 
+                    background: rgba(255, 255, 255, 0.05);
+                }
+            }
+        }
+    }
+}

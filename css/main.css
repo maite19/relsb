@@ -1,238 +1,198 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: "Oswald", sans-serif;
-    background-color: black;
-    color: #fff;
-    line-height: 1.6;
+  font-family: "oswald", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
 }
 
-        /* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: white;
-    gap: 2rem;
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.logo-titulo {
-    display: flex;
-    flex-direction: column; /* título arriba, logo debajo */
-    align-items: flex-start;
-}
-
-h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    color: black;
-    margin-bottom: 1rem;
-}
-
-.imagen-logo {
-    width: 40rem;
-    margin: 1rem 0;
-    transition: transform 0.3s ease;
-}
-
-.imagen-logo:hover {
-    transform: scale(1.05);
-}
-
-        /* NAV */
-.nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    list-style: none;
-    margin: 2rem auto;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 2.5rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav ul li a:hover {
-    color: rgb(33, 0, 51);
-}
-
-/* Tablets (entre 769px y 1024px) igual que escritorio pero con tamaños ajustados */
-@media (min-width: 769px) and (max-width: 1024px) {
-    h1 {
-        font-size: 4rem; /* un poco más chico */
-    }
-
-    .imagen-logo {
-        width: 30rem; 
-    }
-
-    .nav ul li a {
-        font-size: 2.2rem; 
-    }
-}
-/* Responsive: nav debajo del header */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* logo/título arriba, nav debajo */
-        align-items: center;
-    }
-
-    .nav ul {
-        flex-direction: row; /* mantiene los links en fila */
-        flex-wrap: wrap;     /* si no entran, bajan a otra línea */
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .imagen-logo {
-        width: 25rem; 
-    }
-
-    h1 {
-        font-size: 3.5rem; 
-    }
-}
-
-
-        /*FOOTER*/
-footer {
-    background-color:black;
-    padding: 2rem 0;
-    text-align: center;
-    font-size: 1.4rem;
-    color: grey;
-}
-.iconosFooter{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1.7rem; 
-}
-
-/* NAV del footer */
-.navFooter ul {
   display: flex;
-  justify-content: center;   /* centra los links */
-  gap: 3rem;                 /* espacio entre links */
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #fff;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+header .logo-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .logo-titulo h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+}
+header .logo-titulo .imagen-logo {
+  width: 40rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease;
+}
+header .logo-titulo .imagen-logo:hover {
+  transform: scale(1.05);
+}
+header .nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+  margin: 2rem auto;
+}
+header .nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+header .nav ul li a:hover {
+  color: rgb(33, 0, 51);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header .logo-titulo h1 {
+    font-size: 4rem;
+  }
+  header .logo-titulo .imagen-logo {
+    width: 30rem;
+  }
+  header .nav ul li a {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .logo-titulo {
+    align-items: center;
+  }
+  header .logo-titulo h1 {
+    font-size: 3.5rem;
+  }
+  header .logo-titulo .imagen-logo {
+    width: 25rem;
+  }
+  header .nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+footer {
+  background-color: #000;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  color: grey;
+}
+footer .imagen-logo-footer {
+  width: 27rem;
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+footer .navFooter ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
   list-style: none;
   margin: 2rem auto;
   padding: 0;
 }
-
-.navFooter ul li a {
+footer .navFooter ul li a {
   text-decoration: none;
-  color: grey;               /* color más suave para el footer */
-  font-size: 2.2rem;         
+  color: grey;
+  font-size: 2.2rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
-.navFooter ul li a:hover {
-  color: #b300ff;            /* hover llamativo para diferenciar */
+footer .navFooter ul li a:hover {
+  color: #b300ff;
 }
-
-/*  Responsive: mobile */
-@media (max-width: 768px) {
-  .navFooter ul {
-    flex-direction: row;   /* mantiene fila */
-    flex-wrap: wrap;       /* si no entran, bajan a otra línea */
-    gap: 2rem;
-  }
-
-  .navFooter ul li a {
-    font-size: 1.8rem;     /* ajusta tamaño en mobile */
-  }
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navFooter ul li a {
-    font-size: 2rem;       
-  }
-}
-
-.imagen-logo-footer{
-    width: 27rem;
-    height: auto;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-/* Contenedor del formulario */
-.formFooter {
+footer .formFooter {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
 }
-
-/* Campo de email */
-.formFooter input[type="email"] {
+footer .formFooter input[type=email] {
   padding: 0.8rem 1rem;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
   width: 250px;
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a;
   color: #f5f5f5;
 }
-
-.formFooter input[type="email"]::placeholder {
-  color: #aaa; 
+footer .formFooter input[type=email]::placeholder {
+  color: #aaa;
 }
-
-/* Botón de enviar */
-.formFooter input[type="submit"] {
+footer .formFooter input[type=submit] {
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 5px;
-  background: linear-gradient(135deg, #6a00ff, #b300ff); /* degradado llamativo */
-  color: white;
+  background: linear-gradient(135deg, #6a00ff, #b300ff);
+  color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform, box-shadow 0.3s ease;
 }
-
-.formFooter input[type="submit"]:hover {
+footer .formFooter input[type=submit]:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(179, 0, 255, 0.6);
 }
-
-
-        /*BOTONES*/
-  
-button{
-    font-family: "Oswald", sans-serif;
-    background-color: rgb(33, 0, 51);
-    color:  white;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.6rem 1.2rem;
-    cursor: pointer;
-    font-size: 1.6rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+footer .iconosFooter {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.7rem;
 }
 
+@media (max-width: 768px) {
+  footer .navFooter ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  footer .navFooter ul li a {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  footer .navFooter ul li a {
+    font-size: 2rem;
+  }
+}
+button {
+  font-family: "oswald", sans-serif;
+  background-color: rgb(33, 0, 51);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 button:hover {
-    background-color: rgba(24, 1, 37, 0.895);
-    transform: scale(1.05);
+  background-color: rgba(24, 1, 37, 0.9);
+  transform: scale(1.05);
 }
-
-
-        /*INICIO*/
 
 .imagen-inicio img {
   width: 100%;
@@ -241,18 +201,17 @@ button:hover {
 }
 
 .titulo-inicio {
-  color: white;
+  color: #fff;
   font-size: 3rem;
   font-weight: 100;
 }
 
 .grandesExitos {
-  background: linear-gradient(200deg, rgb(0, 0, 0), rgb(33, 0, 51));
+  background: linear-gradient(200deg, #000, rgb(33, 0, 51));
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 1rem;
   margin-top: 2rem;
 }
-
 .grandesExitos h3 {
   color: #f5f5f5;
   text-align: center;
@@ -260,493 +219,395 @@ button:hover {
 }
 
 .ratio iframe {
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
-
 .ratio iframe:hover {
   transform: scale(1.03);
-  box-shadow: 0 12px 25px rgba(255,255,255,0.2);
-}
-
-        /*DISCOGRAFIA*/
-
-.titulo-seccion {
-    display: flex;
-    align-items: flex-end;
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    color: white;
-}
-
-.titulo-seccion .linea {
-    flex-grow: 1; /* ocupa todo el espacio restante */
-    height: 2px; /*grosor*/
-    background-color: rgb(33, 0, 51); 
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
 }
 
 .discografia-albums {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
-
 .discografia-albums h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    text-align: left;
-    color: white;
+  font-family: "oswald", sans-serif;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #fff;
 }
 
 .album-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 4rem; /* espacio entre tarjetas */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
 }
 
-.album-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color:rgba(255, 255, 255, 0.081);
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 3px 6px 10px rgb(45, 0, 61);
-    transition: transform 0.2s ease;
+.album-card, .song-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.081);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 3px 6px 10px rgb(45, 0, 61);
+  transition: transform 0.3s ease;
+}
+.album-card:hover, .song-card:hover {
+  transform: translateY(-5px);
+}
+.album-card img, .song-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.album-card p, .song-card p {
+  font-family: "oswald", sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #444;
 }
 
-.album-card:hover {
-    transform: translateY(-5px); /* efecto flotante */
-}
-
-.album-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.album-card p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #444;
-}
-
- /* Contenedor del título con línea a la izquierda */
 .titulo-con-linea {
-    display: flex;
-    flex-direction: column; /* apila elementos en columna */
-    align-items: flex-end; /* alinea todo a la derecha */
-    margin-bottom: 2rem;
-    position: relative; /* necesario para la línea inferior */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  position: relative;
 }
-
-/* Línea arriba a la izquierda */
 .titulo-con-linea .linea {
-    align-self: flex-start; /* se pega a la izquierda */
-    width: 40%; /* largo de la línea, ajustá según tu diseño */
-    height: 2px;
-    background-color: rgb(33, 0, 51);
-    margin-bottom: 1rem;
+  align-self: flex-start;
+  width: 40%;
+  height: 2px;
+  background-color: rgb(33, 0, 51);
+  margin-bottom: 1rem;
 }
-
-/* Título */
 .titulo-con-linea h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 5rem;  
-    color: white;
-    margin: 0;
+  font-family: "oswald", sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  margin: 0;
 }
-
- /* Línea inferior */
 .titulo-con-linea::after {
-    content: "";
-    position: absolute;
-    bottom: -10px; /* debajo del bloque */
-    right: 0;
-    width: 75%;
-    height: 2px;
-    background-color: rgb(33, 0, 51);
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 75%;
+  height: 2px;
+  background-color: rgb(33, 0, 51);
 }
 
-
-/* Sección de canciones */
-.discografia-songs {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-}
-
-/* Grilla de canciones */
 .songs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 4rem; /* espacio entre tarjetas */
-    position: relative;   /* necesario para que ::after funcione */
-    padding-bottom: 2rem; /* espacio para la línea */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  position: relative;
+  padding-bottom: 2rem;
 }
-
-/* Tarjeta de canción */
-.song-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.081);
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 3px 6px 10px rgb(45, 0, 61);
-    transition: transform 0.2s ease;
-}
-
-.song-card:hover {
-    transform: translateY(-5px); /* efecto flotante */
-}
-
-.song-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.song-card p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #444;
-}
-
-/* Línea debajo de todas las cards */
 .songs-grid::after {
-    content: "";
-    position: absolute;
-    bottom: 0;  
-    left: 0;
-    width: 60%;
-    height: 2px;
-    background-color: rgb(33, 0, 51);
-    margin: 0 auto;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background-color: rgb(33, 0, 51);
+  margin: 0 auto;
 }
 
-.explorar-discografia {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin: 3rem 0;
-    padding: 1.5rem;
-    background: linear-gradient(90deg, #630396, rgb(33, 0, 51));
-    border-radius: 2rem;
-    box-shadow: 3px 6px 10px rgb(45, 0, 61);
-    width: 100%; /* asegura que ocupe todo el ancho */
+.biografia {
+  background: #000;
+  color: #fff;
+  padding: 5rem 2rem;
+}
+.biografia h2 {
+  font-size: 4.8rem;
+  color: rgb(33, 0, 51);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.biografia .texto p {
+  font-size: 2.2rem;
+  line-height: 1.9;
+  color: #cccccc;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(179, 0, 255, 0.3);
+}
+.biografia .texto blockquote {
+  font-size: 2.2rem;
+  line-height: 1.9;
+  color: #420066;
+  font-style: italic;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  border-left: 4px solid rgb(33, 0, 51);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+}
+.biografia .bloque {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+.biografia .bloque:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.biografia .bloque img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+}
+.biografia .bloque img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.biografia .bloque .texto {
+  max-width: 800px;
+}
+.biografia .bloque .texto h3 {
+  font-size: 3.2rem;
+  margin-bottom: 1.5rem;
+  color: #630099;
 }
 
-.explorar-discografia h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.8rem;
-    color: white;
-    margin: 0;
-}
-
-.explorar-discografia button {
-    font-family: 'Oswald', sans-serif;
-    background-color: rgb(255, 255, 255);
-    color: #500778;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.7rem 1.5rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.explorar-discografia button:hover {
-    background-color: #f0e6ff13;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-        /*BIOGRAFIA*/
-.biografia-relsb h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-.biografia-relsb h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: linear-gradient(90deg, #630396, rgb(33, 0, 51));
-    margin: 1rem auto 0;
-    border-radius: 2px;
-}
-
-.biografia-relsb p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
-    color: #e0e0e0;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.biografia-relsb img {
-    border-radius: 1.5rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.biografia-relsb img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
-}
-
-.biografia-relsb .row {
-    margin-bottom: 4rem;
-}
-
-.biografia-relsb .row:last-child img {
-    border-radius: 2rem;
-}
-
-        /* SHOP */
-.titulo-subrayado {
-    text-align: center;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.titulo-subrayado h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
-    color: white;
-    display: inline-block;
-    margin: 0;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgb(33, 0, 51); /* subrayado */
-}
-
-/* Cards del Shop */
-.shop-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.081);
-    border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 3px 6px 10px rgb(45, 0, 61);
-    transition: transform 0.2s ease;
-}
-
-.shop-card:hover {
-    transform: translateY(-5px);
-}
-
-.shop-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.shop-card p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    color: #444;
-}
-
-.shop-card button {
-    font-family: 'Oswald', sans-serif;
-    background-color: white;
-    color: #500778;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.7rem 1.5rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.shop-card button:hover {
-    background-color: #f0e6ff13;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Sección explorar*/
-.explorar-shop {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    margin: 3rem auto;
-    padding: 2rem;
-    max-width: 800px;
-    background: linear-gradient(90deg, #630396, rgb(33, 0, 51));
-    border-radius: 2rem;
-    box-shadow: 3px 6px 10px rgb(45, 0, 61);
-    text-align: center;
-}
-
-.explorar-shop h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    color: white;
-    margin: 0;
-}
-
-.explorar-shop p {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    color: #ddd;
-    margin: 0;
-}
-
-.explorar-shop button {
-    font-family: 'Oswald', sans-serif;
-    background-color: white;
-    color: #500778;
-    border: none;
-    border-radius: 1rem;
-    padding: 0.7rem 1.5rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.explorar-shop button:hover {
-    background-color: #f0e6ff13;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Línea decorativa debajo de todas las cards*/
-.shop .row:last-of-type::after {
-    content: "";
-    display: block;
-    margin: 2rem auto 0 auto;
-    width: 60%;
-    height: 2px;
-    background-color: rgb(33, 0, 51);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .shop-card p {
-        font-size: 1.2rem;
-    }
-    .shop-card button {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .shop-card button {
-        width: 100%;
-    }
-    .titulo-subrayado h2 {
-        font-size: 2rem;
-    }
-}
-
-        /*REDES*/
-.redes {
-    background-image: url('../imagenes/redes-back.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 4px solid #6a0dad;
-    border-bottom: 4px solid #6a0dad;
-}
-
-.redes .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* oscurece más la foto */
-}
-
-.redes h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-shadow: 0 0 15px rgba(106, 13, 173, 0.8); /* glow violeta */
-    color: #fff;
-}
-
-.redes p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    max-width: 900px;
-    margin: 0 auto 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 12px 18px;
-    border-radius: 6px;
-    text-shadow: 0 0 10px rgba(106, 13, 173, 0.7); /* sombra violeta */
-    color: #fff;
-}
-
-/*iconos PNG con marco */
-.iconosRedes a {
-    background-color: rgba(255, 255, 255, 0.05); /* marco gris oscuro */
-    padding: 16px;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-}
-
-.iconosRedes img {
-    width: 128px;
-    height: 128px;
-    display: block;
-    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.7)); /* sombra suave */
-}
-
-.iconosRedes a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(106, 13, 173, 0.8); 
-    background: rgba(106, 13, 173, 0.2); /* fondo violeta suave */
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-    .iconosRedes img {
-        width: 64px;
-        height: 64px;
-    }
+  .biografia h2 {
+    font-size: 3.5rem;
+  }
+  .biografia .bloque {
+    flex-direction: column;
+  }
+  .biografia .bloque img {
+    max-width: 100%;
+  }
+  .biografia .bloque .texto {
+    text-align: center;
+  }
+  .biografia .bloque .texto h3 {
+    font-size: 2.6rem;
+  }
+  .biografia .bloque .texto p {
+    font-size: 2rem;
+    line-height: 1.8;
+    border-bottom: 1px solid rgba(179, 0, 255, 0.3);
+    padding-bottom: 0.8rem;
+  }
+  .biografia .bloque .texto blockquote {
+    font-size: 2rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+.titulo-subrayado {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.titulo-subrayado h2 {
+  font-family: "oswald", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(33, 0, 51);
+}
 
-    .redes h2 {
-        font-size: 2rem;
-    }
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.081);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 3px 6px 10px rgb(45, 0, 61);
+  transition: transform 0.3s ease;
+}
+.shop-card:hover {
+  transform: translateY(-5px);
+}
+.shop-card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.shop-card p {
+  font-family: "oswald", sans-serif;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #444;
+}
+.shop-card button {
+  font-family: "oswald", sans-serif;
+  background-color: #fff;
+  color: #500778;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.shop-card button:hover {
+  background-color: rgba(240, 230, 255, 0.0745098039);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    .redes p {
-        font-size: 1.1rem;
-    }
+.explorar-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  background: linear-gradient(90deg, #630396, rgb(33, 0, 51));
+  border-radius: 2rem;
+  box-shadow: 3px 6px 10px rgb(45, 0, 61);
+  text-align: center;
+}
+.explorar-shop h3 {
+  font-family: "oswald", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+.explorar-shop p {
+  font-family: "oswald", sans-serif;
+  font-size: 1.2rem;
+  color: #ddd;
+  margin: 0;
+}
+.explorar-shop button {
+  font-family: "oswald", sans-serif;
+  background-color: #fff;
+  color: #500778;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.explorar-shop button:hover {
+  background-color: rgba(240, 230, 255, 0.0745098039);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shop .row:last-of-type::after {
+  content: "";
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 60%;
+  height: 2px;
+  background-color: rgb(33, 0, 51);
+}
+
+@media (max-width: 992px) {
+  .shop-card p {
+    font-size: 1.2rem;
+  }
+  .shop-card button {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .shop-card button {
+    width: 100%;
+  }
+  .titulo-subrayado h2 {
+    font-size: 2rem;
+  }
+}
+.redes {
+  background: linear-gradient(135deg, #000, rgb(33, 0, 51));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.redes h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.redes p {
+  font-size: 1.6rem;
+  color: #777777;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+.redes .iconosRedes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+.redes .iconosRedes a {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  outline: none;
+}
+.redes .iconosRedes a img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+}
+.redes .iconosRedes a span {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.redes .iconosRedes a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(179, 0, 255, 0.6);
+  background: rgba(179, 0, 255, 0.1);
+}
+.redes .iconosRedes a:focus, .redes .iconosRedes a:active {
+  outline: none;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .redes h2 {
+    font-size: 2.8rem;
+  }
+  .redes p {
+    font-size: 1.2rem;
+  }
+  .redes .iconosRedes a img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

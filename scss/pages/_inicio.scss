@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+
+.imagen-inicio {
+    img {
+        width: 100%;
+        border-radius: 1rem;
+        filter: brightness(70%);
+    }
+}
+
+.titulo-inicio {
+    color: $blanco;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.grandesExitos {
+    background: linear-gradient(200deg, $negro, $violeta);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+
+    h3 {
+        color: #f5f5f5;
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+$sombras: (
+    normal: 0 8px 20px rgba(0,0,0,0.5),
+    hover: 0 12px 25px rgba(255,255,255,0.2)
+);
+
+.ratio {
+    iframe {
+        border-radius: 1rem;
+        box-shadow: map-get($sombras, normal);
+        @include transition(all);
+
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: map-get($sombras, hover);
+        }
+    }
+}
