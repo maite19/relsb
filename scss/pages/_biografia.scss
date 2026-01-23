@@ -7,7 +7,7 @@
 
     h2 {
         font-size: 4.8rem;
-        color: $violeta;
+        color: rgb(116, 0, 166);
         margin-bottom: 3rem;
         text-align: center;
     }
@@ -24,11 +24,11 @@
     .texto blockquote {
         font-size: 2.2rem; // mismo tamaño que los párrafos
         line-height: 1.9;
-        color: lighten($violeta, 10%); // tono violeta más claro
+        color: lighten(rgb(116, 0, 166), 10%); // tono violeta más claro
         font-style: italic;
         margin: 2rem 0;
         padding: 1rem 2rem;
-        border-left: 4px solid $violeta; // detalle violeta
+        border-left: 4px solid rgb(116, 0, 166); // detalle violeta
         background: rgba(255, 255, 255, 0.05); // fondo sutil
         border-radius: 0.5rem;
     }

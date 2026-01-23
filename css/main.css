@@ -328,7 +328,7 @@ button:hover {
 }
 .biografia h2 {
   font-size: 4.8rem;
-  color: rgb(33, 0, 51);
+  color: rgb(116, 0, 166);
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -343,11 +343,11 @@ button:hover {
 .biografia .texto blockquote {
   font-size: 2.2rem;
   line-height: 1.9;
-  color: #420066;
+  color: rgb(151.6385542169, 0, 217);
   font-style: italic;
   margin: 2rem 0;
   padding: 1rem 2rem;
-  border-left: 4px solid rgb(33, 0, 51);
+  border-left: 4px solid rgb(116, 0, 166);
   background: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
 }
